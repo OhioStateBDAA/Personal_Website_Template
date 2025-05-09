@@ -33,7 +33,7 @@ const ProjectCard = ({
 
   return (
     <div className={cn(
-      "mb-4 p-4 rounded-lg bg-card hover-transition paper-shadow hover:bg-accent/50",
+      "mb-3 p-4 rounded-lg dashed-border hover-transition hover:bg-accent/10",
       "hover-float"
     )}>
       {link ? (

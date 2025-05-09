@@ -24,7 +24,7 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground transition-colors duration-500 pb-12">
       <Header />
       
-      <main className="max-w-4xl mx-auto px-6 py-8 space-y-12">
+      <main className="max-w-4xl mx-auto px-6 py-8 space-y-10">
         {/* Introduction */}
         <section className="mb-8 origami-fold">
           <div className="mb-6">
@@ -46,7 +46,10 @@ const Index = () => {
 
         {/* Work Experience */}
         <section>
-          <SectionTitle title="Work Experience" />
+          <SectionTitle 
+            title="Work Experience" 
+            resumeLink="/resume.pdf" 
+          />
           
           <RoleCard 
             company="Technology Inc"
