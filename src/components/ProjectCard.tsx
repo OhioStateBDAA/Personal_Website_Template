@@ -61,9 +61,9 @@ const ProjectCard = ({
       </div>
       
       {(details || tags) && (
-        <div className={cn("origami-fold-content overflow-hidden transition-all duration-400", 
+        <div className={cn("origami-fold-content overflow-hidden transition-all duration-500", 
           isOpen ? "origami-fold-open" : "origami-fold-closed")}>
-          <div className="p-4 pt-2 border-t border-dashed px-[16px] my-0 py-[16px]">
+          <div className="p-4 pt-2 border-t border-dashed px-[16px] my-0 py-[20px]">
             {details && <p className="text-sm mb-3">{details}</p>}
             
             {tags && tags.length > 0 && (

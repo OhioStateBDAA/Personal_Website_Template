@@ -1,7 +1,8 @@
 
-import { Code, Database, Globe, MessageSquare, PenTool, Play } from 'lucide-react';
+import { Briefcase, Building, Code, Database, Factory, Globe, Landmark, MessageSquare, PenTool, Play } from 'lucide-react';
 
 export interface WorkExperience {
+  logo: typeof Briefcase;
   company: string;
   role: string;
   period: string;
@@ -28,6 +29,7 @@ export interface PersonalLink {
 
 export const workExperiences: WorkExperience[] = [
   {
+    logo: Building,
     company: "Technology Inc",
     role: "Engineering, AI",
     period: "2023 - Present",
@@ -36,6 +38,7 @@ export const workExperiences: WorkExperience[] = [
     tags: ["Python", "TensorFlow", "React", "AWS"]
   },
   {
+    logo: Landmark,
     company: "Innovation Labs",
     role: "Software Engineer",
     period: "2022 - 2023",
@@ -44,6 +47,7 @@ export const workExperiences: WorkExperience[] = [
     tags: ["JavaScript", "Node.js", "Docker", "PostgreSQL"]
   },
   {
+    logo: Factory,
     company: "Global Tech",
     role: "ML Engineer",
     period: "2021 - 2022",
@@ -51,6 +55,7 @@ export const workExperiences: WorkExperience[] = [
     tags: ["Python", "Scikit-learn", "PyTorch", "Kafka"]
   },
   {
+    logo: Briefcase,
     company: "Data Solutions",
     role: "Data Scientist",
     period: "2020",

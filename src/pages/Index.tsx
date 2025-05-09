@@ -54,6 +54,7 @@ const Index = () => {
           {workExperiences.map((experience, index) => (
             <RoleCard 
               key={index}
+              logo={<experience.logo className="h-4 w-4" />}
               company={experience.company}
               role={experience.role}
               period={experience.period}
