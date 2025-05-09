@@ -21,7 +21,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-300 pb-12">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-500 pb-12">
       <Header />
       
       <main className="max-w-4xl mx-auto px-6 py-8 space-y-12">
@@ -159,16 +159,16 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Favorite Films Section - Optional */}
+        {/* Favorite Films Section */}
         <section>
           <SectionTitle title="Favorite Films" />
           
           <div className="grid grid-cols-4 gap-3">
-            {/* Film placeholders - in a real app, these could be images */}
+            {/* Film placeholders */}
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
               <div 
                 key={item} 
-                className="bg-secondary aspect-[2/3] rounded-md paper-shadow hover:animate-paper-float"
+                className="bg-secondary aspect-[2/3] rounded-md paper-shadow hover-transition hover-float"
               />
             ))}
           </div>

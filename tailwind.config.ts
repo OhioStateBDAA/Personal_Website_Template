@@ -84,6 +84,10 @@ export default {
         "paper-float": {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-5px)" }
+        },
+        "smooth-return": {
+          "0%": { transform: "translateY(-5px)" },
+          "100%": { transform: "translateY(0px)" }
         }
       },
       animation: {
@@ -92,8 +96,14 @@ export default {
         "fold-in": "fold-in 0.5s ease-in-out forwards",
         "fold-out": "fold-out 0.5s ease-in-out forwards",
         "mode-toggle": "mode-toggle 0.5s ease-in-out forwards",
-        "paper-float": "paper-float 3s ease-in-out infinite"
+        "paper-float": "paper-float 3s ease-in-out infinite",
+        "smooth-return": "smooth-return 0.5s ease-in-out"
       },
+      transitionDuration: {
+        '450': '450ms',
+        '500': '500ms',
+        '600': '600ms',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

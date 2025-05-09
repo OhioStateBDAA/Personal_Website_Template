@@ -33,8 +33,8 @@ const ProjectCard = ({
 
   return (
     <div className={cn(
-      "mb-4 p-4 rounded-lg bg-card hover:bg-accent/50 transition-colors paper-shadow",
-      "hover:animate-paper-float"
+      "mb-4 p-4 rounded-lg bg-card hover-transition paper-shadow hover:bg-accent/50",
+      "hover-float"
     )}>
       {link ? (
         <a href={link} target="_blank" rel="noopener noreferrer" className="block">
