@@ -6,7 +6,7 @@ import ProjectCard from '@/components/ProjectCard';
 import SectionTitle from '@/components/SectionTitle';
 import LinkCard from '@/components/LinkCard';
 import { useTheme } from '@/hooks/useTheme';
-import { Code, Database, Globe, MessageSquare, PenTool, Play } from 'lucide-react';
+import { workExperiences, projects, personalLinks } from '@/data/portfolioData';
 
 const Index = () => {
   const { theme } = useTheme();
@@ -51,84 +51,35 @@ const Index = () => {
             resumeLink="/resume.pdf" 
           />
           
-          <RoleCard 
-            company="Technology Inc"
-            role="Engineering, AI"
-            period="2023 - Present"
-            location="San Francisco, CA"
-            description="Leading the development of real-time multimodal intelligence solutions. Working with cutting-edge AI models and diverse data sources."
-            tags={["Python", "TensorFlow", "React", "AWS"]}
-          />
-          
-          <RoleCard 
-            company="Innovation Labs"
-            role="Software Engineer"
-            period="2022 - 2023"
-            location="New York, NY"
-            description="Developed scalable web applications and APIs. Implemented CI/CD pipelines and contributed to system architecture decisions."
-            tags={["JavaScript", "Node.js", "Docker", "PostgreSQL"]}
-          />
-          
-          <RoleCard 
-            company="Global Tech"
-            role="ML Engineer"
-            period="2021 - 2022"
-            description="Built machine learning models for demand forecasting with millions of users. Improved prediction accuracy by 32%."
-            tags={["Python", "Scikit-learn", "PyTorch", "Kafka"]}
-          />
-          
-          <RoleCard 
-            company="Data Solutions"
-            role="Data Scientist"
-            period="2020"
-            description="Analyzed large datasets to extract business insights. Created interactive dashboards for executive leadership."
-            tags={["R", "SQL", "Tableau", "Big Data"]}
-          />
+          {workExperiences.map((experience, index) => (
+            <RoleCard 
+              key={index}
+              company={experience.company}
+              role={experience.role}
+              period={experience.period}
+              location={experience.location}
+              description={experience.description}
+              tags={experience.tags}
+            />
+          ))}
         </section>
 
         {/* Projects */}
         <section>
           <SectionTitle title="Projects" />
           
-          <ProjectCard 
-            logo={<PenTool className="h-4 w-4" />}
-            title="AI Creative Assistant"
-            description="AI platform for generating creative content"
-            year="2023"
-            link="#"
-          />
-          
-          <ProjectCard 
-            logo={<Globe className="h-4 w-4" />}
-            title="Open Source Intelligence"
-            description="Framework for LLMs focused on bias detection"
-            year="2023"
-            link="#"
-          />
-          
-          <ProjectCard 
-            logo={<Play className="h-4 w-4" />}
-            title="Smart Media Platform"
-            description="AI-powered content creation tool"
-            year="2022"
-            link="#"
-          />
-          
-          <ProjectCard 
-            logo={<MessageSquare className="h-4 w-4" />}
-            title="Conversation AI"
-            description="Advanced dialogue system for healthcare"
-            year="2022"
-            link="#"
-          />
-          
-          <ProjectCard 
-            logo={<Database className="h-4 w-4" />}
-            title="Data Analytics Suite"
-            description="ML algorithms for financial analysis"
-            year="2021"
-            link="#"
-          />
+          {projects.map((project, index) => (
+            <ProjectCard 
+              key={index}
+              logo={<project.logo className="h-4 w-4" />}
+              title={project.title}
+              description={project.description}
+              year={project.year}
+              link={project.link}
+              details={project.details}
+              tags={project.tags}
+            />
+          ))}
         </section>
 
         {/* Personal Links */}
@@ -136,29 +87,14 @@ const Index = () => {
           <SectionTitle title="Personal Projects" />
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <LinkCard 
-              title="portfolio.app"
-              description="A beautiful tool to showcase your work with modern design"
-              url="#"
-            />
-            
-            <LinkCard 
-              title="subscriptions.app"
-              description="One-page tool for tracking all your subscriptions"
-              url="#"
-            />
-            
-            <LinkCard 
-              title="chat.app"
-              description="Simple personal chat interface with AI assistants"
-              url="#"
-            />
-            
-            <LinkCard 
-              title="opensource.app"
-              description="Open-source multilingual AI playground"
-              url="#"
-            />
+            {personalLinks.map((link, index) => (
+              <LinkCard 
+                key={index}
+                title={link.title}
+                description={link.description}
+                url={link.url}
+              />
+            ))}
           </div>
         </section>
 

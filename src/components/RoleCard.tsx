@@ -38,7 +38,7 @@ const RoleCard = ({
       </div>
       
       <div className={cn("origami-fold-content overflow-hidden transition-all duration-400", isOpen ? "origami-fold-open" : "origami-fold-closed")}>
-        <div className="p-4 pt-0 border-t border-dashed px-[16px] my-0 py-[10px]">
+        <div className="p-4 pt-2 border-t border-dashed px-[16px] my-0 py-[16px]">
           {description && <p className="text-sm mb-3">{description}</p>}
           
           {tags && tags.length > 0 && <div className="flex flex-wrap gap-2">
