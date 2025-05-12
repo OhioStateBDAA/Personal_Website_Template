@@ -24,25 +24,22 @@ const ProjectCard = ({
   const [isOpen, setIsOpen] = useState(false);
   
   const headerContent = (
-    <div className="flex items-center space-x-3">
-      {logo && <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center bg-secondary">
+    <div className="flex items-center space-x-4">
+      {logo && <div className="w-8 h-8 flex items-center justify-center">
         {logo}
       </div>}
       <div className="flex-1">
-        <h3 className="font-bold">{title}</h3>
+        <h3 className="font-semibold text-foreground">{title}</h3>
         <p className="text-sm text-muted-foreground">{description}</p>
       </div>
-      <div className="text-sm">{year}</div>
+      <div className="text-sm text-muted-foreground">{year}</div>
     </div>
   );
 
   return (
-    <div className={cn(
-      "mb-3 origami-fold dashed-border rounded-lg hover-transition hover:bg-accent/10",
-      "hover-float"
-    )}>
+    <div className="mb-5 origami-fold border-l border-dashed border-muted pl-4 hover:border-primary transition-colors">
       <div 
-        className="p-4 flex justify-between items-center cursor-pointer" 
+        className="py-2 flex justify-between items-center cursor-pointer" 
         onClick={() => setIsOpen(!isOpen)}
       >
         {link ? (
@@ -61,15 +58,15 @@ const ProjectCard = ({
       </div>
       
       {(details || tags) && (
-        <div className={cn("origami-fold-content overflow-hidden transition-all duration-500", 
+        <div className={cn("origami-fold-content overflow-hidden transition-all duration-600", 
           isOpen ? "origami-fold-open" : "origami-fold-closed")}>
-          <div className="p-4 pt-2 border-t border-dashed px-[16px] my-0 py-[20px]">
-            {details && <p className="text-sm mb-3">{details}</p>}
+          <div className="py-4 px-0">
+            {details && <p className="text-sm mb-3 text-muted-foreground">{details}</p>}
             
             {tags && tags.length > 0 && (
-              <div className="flex flex-wrap gap-2">
+              <div className="flex flex-wrap gap-2 mt-3">
                 {tags.map(tag => (
-                  <span key={tag} className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-md hover-transition">
+                  <span key={tag} className="px-2 py-1 bg-secondary text-secondary-foreground text-xs rounded-sm hover-transition">
                     {tag}
                   </span>
                 ))}

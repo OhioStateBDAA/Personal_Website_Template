@@ -16,7 +16,7 @@ const IconLink = ({ href, icon, className, label }: IconLinkProps) => {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "h-10 w-10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors",
+        "h-8 w-8 rounded-full flex items-center justify-center hover:text-primary transition-colors",
         className
       )}
       aria-label={label}

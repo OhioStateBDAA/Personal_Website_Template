@@ -21,23 +21,23 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground transition-colors duration-500 pb-12">
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-500">
       <Header />
       
-      <main className="max-w-4xl mx-auto px-6 py-8 space-y-10">
+      <main className="max-w-3xl mx-auto px-6 py-12 space-y-16">
         {/* Introduction */}
-        <section className="mb-8 origami-fold">
+        <section className="mb-8">
           <div className="mb-6">
-            <h2 className="text-lg font-medium inline-flex items-center">
+            <h2 className="text-lg font-semibold inline-flex items-center">
               <span className="mr-2">👋</span>
               Welcome to Your Portfolio
             </h2>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-4 text-muted-foreground leading-relaxed">
               I'm a passionate professional with experience in engineering and technology.
               Previously, I worked on innovative projects in multiple industries and now
               I'm focused on building cutting-edge solutions.
             </p>
-            <p className="mt-4 text-muted-foreground">
+            <p className="mt-4 text-muted-foreground leading-relaxed">
               I enjoy traveling between New York and San Francisco, watching great movies,
               and exploring new culinary experiences.
             </p>
@@ -51,43 +51,47 @@ const Index = () => {
             resumeLink="/resume.pdf" 
           />
           
-          {workExperiences.map((experience, index) => (
-            <RoleCard 
-              key={index}
-              logo={<experience.logo className="h-4 w-4" />}
-              company={experience.company}
-              role={experience.role}
-              period={experience.period}
-              location={experience.location}
-              description={experience.description}
-              tags={experience.tags}
-            />
-          ))}
+          <div className="space-y-2">
+            {workExperiences.map((experience, index) => (
+              <RoleCard 
+                key={index}
+                logo={<experience.logo className="h-4 w-4" />}
+                company={experience.company}
+                role={experience.role}
+                period={experience.period}
+                location={experience.location}
+                description={experience.description}
+                tags={experience.tags}
+              />
+            ))}
+          </div>
         </section>
 
         {/* Projects */}
         <section>
           <SectionTitle title="Projects" />
           
-          {projects.map((project, index) => (
-            <ProjectCard 
-              key={index}
-              logo={<project.logo className="h-4 w-4" />}
-              title={project.title}
-              description={project.description}
-              year={project.year}
-              link={project.link}
-              details={project.details}
-              tags={project.tags}
-            />
-          ))}
+          <div className="space-y-2">
+            {projects.map((project, index) => (
+              <ProjectCard 
+                key={index}
+                logo={<project.logo className="h-4 w-4" />}
+                title={project.title}
+                description={project.description}
+                year={project.year}
+                link={project.link}
+                details={project.details}
+                tags={project.tags}
+              />
+            ))}
+          </div>
         </section>
 
         {/* Personal Links */}
         <section>
           <SectionTitle title="Personal Projects" />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="space-y-2">
             {personalLinks.map((link, index) => (
               <LinkCard 
                 key={index}
@@ -108,7 +112,7 @@ const Index = () => {
             {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
               <div 
                 key={item} 
-                className="bg-secondary aspect-[2/3] rounded-md paper-shadow hover-transition hover-float"
+                className="bg-muted aspect-[2/3] rounded-sm hover-transition hover-float"
               />
             ))}
           </div>
