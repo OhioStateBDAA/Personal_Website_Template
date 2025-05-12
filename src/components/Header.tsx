@@ -6,7 +6,7 @@ import IconLink from './IconLink';
 const Header = () => {
   return (
     <header className="py-8 flex justify-between items-center w-full max-w-3xl mx-auto px-6">
-      <h1 className="text-xl font-semibold">Your Name</h1>
+      <h1 className="text-xl font-semibold tracking-tight">Your Name</h1>
       
       <div className="flex items-center space-x-3">
         <IconLink 

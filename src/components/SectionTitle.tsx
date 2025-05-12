@@ -11,7 +11,7 @@ interface SectionTitleProps {
 const SectionTitle = ({ title, className, resumeLink }: SectionTitleProps) => {
   return (
     <div className="flex justify-between items-center mb-6 border-b border-muted pb-2">
-      <h2 className={cn("text-lg font-semibold text-primary", className)}>
+      <h2 className={cn("text-lg font-semibold text-primary heading", className)}>
         {title}
       </h2>
       {resumeLink && (
